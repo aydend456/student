@@ -7,7 +7,6 @@ show_reading_time: false
 
 Hi! My name is Ayden Dudley
 
-I am super close with my family especially my mom. My family has definitely a big inspiration in my life and encourages me to better myself everyday. I love spending time with my family and go on vacations with them
 
 ### Development Environment
 
