@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: minima
 title: About
 permalink: /about/
 comments: true
