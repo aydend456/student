@@ -145,6 +145,7 @@ permalink: /snake/
         const button_new_game2 = document.getElementById("new_game2");
         const button_setting_menu = document.getElementById("setting_menu");
         const button_setting_menu1 = document.getElementById("setting_menu1");
+        // (start-choice buttons removed)
         // Game Control
         const BLOCK = 10;   // size of block rendering
         let SCREEN = SCREEN_MENU;
@@ -184,10 +185,10 @@ permalink: /snake/
                     break;
             }
         }
-        /* Actions and Events  */
+8:53
+/* Actions and Events  */
         /////////////////////////////////////////////////////////////
-9:41
-window.onload = function(){
+        window.onload = function(){
             // HTML Events to Functions
             button_new_game.onclick = function(){newGame();};
             button_new_game1.onclick = function(){newGame();};
@@ -278,10 +279,17 @@ window.onload = function(){
                 // draw new food immediately in red
                 activeDot(food.x, food.y, "#FF0000");
             }
-            // Repaint canvas
-            ctx.beginPath();
-            ctx.fillStyle = "royalblue";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            // Repaint canvas with alternating green tiles (Google-doodle style)
+            // fill the board as a checker pattern of tiles the size of BLOCK
+            const cols = canvas.width / BLOCK;
+            const rows = canvas.height / BLOCK;
+            for (let ry = 0; ry < rows; ry++){
+                for (let rx = 0; rx < cols; rx++){
+                    // choose light or dark green based on parity
+                    ctx.fillStyle = ((rx + ry) % 2 === 0) ? '#C7F0C7' : '#8FD48F';
+                    ctx.fillRect(rx * BLOCK, ry * BLOCK, BLOCK, BLOCK);
+                }
+            }
             // Paint snake
             for(let i = 0; i < snake.length; i++){
                 // snake segments in green
