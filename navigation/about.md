@@ -172,7 +172,41 @@ Flags are made using Wikipedia images
          });
 })();
 </script>
+</script>
 
+<!-- Favorite TV Shows grid -->
+Favorite TV Shows
+<div class="grid-container" id="shows_grid">
+    <!-- Favorite shows will be added here by JavaScript -->
+</div>
+
+<script>
+    // Base path for local images (place your images in /images/fav_shows/)
+    var site_base = "{{ site.baseurl | default: '' }}";
+    var shows_http_source = (site_base && site_base !== '')
+        ? (site_base.replace(//$/, '') + '/images/fav_shows/')
+        : './images/fav_shows/';
+    var favorite_shows = [
+        {"img": "3/34/One_piece_logo_1.svg", "title": "One-Piece"},
+        {"img": "9/9b/Dragon_Ball_Z_Logo.png", "title": "DragonBall-Z"},
+        {"img": "f/f4/Solo_Leveling_logo.svg", "title": "Solo-Leveling"},
+        {"img": "6/6a/Jujutsu_Kaisen_logo_in_Japan.png", "title": "Jujutsu-Kaisen"}
+    ];
+
+    var showsContainer = document.getElementById("shows_grid");
+    for (const show of favorite_shows) {
+        var item = document.createElement("div");
+        item.className = "grid-item";
+        var img = document.createElement("img");
+        img.src = shows_http_source + encodeURIComponent(show.img);
+        img.alt = show.title;
+        var p = document.createElement("p");
+        p.textContent = show.title;
+        item.appendChild(img);
+        item.appendChild(p);
+        showsContainer.appendChild(item);
+    }
+</script>
 ### Journey through Life
 
 Here is what I did at those places
