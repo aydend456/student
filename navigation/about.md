@@ -106,6 +106,49 @@ Flags are made using Wikipedia images
     }
 </script>
 
+### Here are my favorite foods
+<script>
+// Clear the output
+const outputElement = document.getElementById('outputElement') || (function(){
+    const e = document.createElement('div');
+    e.id = 'outputElement';
+    document.body.appendChild(e);
+    return e;
+})();
+outputElement.innerHTML = '';
+
+// Create or reuse a div container with id 'grid_container'
+let container = document.getElementById('grid_container');
+if (!container) {
+    container = document.createElement('div');
+    container.id = 'grid_container';
+    container.className = 'grid-container';
+}
+
+// Apply the requested styles
+container.style.border = '2px dashed';
+container.style.padding = '10px';
+container.style.display = 'grid';
+container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
+
+// Clear any existing children to avoid duplicate items
+container.innerHTML = '';
+
+// Add sample grid items
+for (let i = 1; i <= 8; i++) {
+  const item = document.createElement('div');
+  item.style.padding = '20px';
+  item.style.textAlign = 'center';
+  item.style.borderRadius = '8px';
+  item.style.border = '1px solid';
+  item.textContent = 'Grid Item ' + i;
+  container.appendChild(item);
+}
+
+// Append container to output
+outputElement.appendChild(container);
+</script>
+
 ### Journey through Life
 
 Here is what I did at those places
