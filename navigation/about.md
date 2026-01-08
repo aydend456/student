@@ -118,7 +118,7 @@ Flags are made using Wikipedia images
 
 ## Here are my favorite foods
 
-<div class="grid-container" id="grid_food">
+<div class="grid-container2" id="grid_food">
     <!-- favorite food items will be added here by JavaScript -->
 </div>
 
@@ -144,7 +144,6 @@ Flags are made using Wikipedia images
              {name: 'Sushi', img: '1/1c/Colorful_sushi_lunch.jpg'},
              {name: 'Burgers', img: 'f/ff/In-N-Out_Burger_cheeseburgers_and_fries.jpg'},
              {name: 'Ice Cream', img: '6/6f/An_ice_cream_cone_at_a_Ben_%26_Jerry%27s_shop_in_Montreal.jpg'},
-             {name: 'Tacos', img: '7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg'},
              {name: 'Ramen', img: '5/56/Soy_Milk_Ramen_and_Tonkotsu_Miso_Ramen_by_Goemon_Ramen_Bar.jpg'},
          ];
 
@@ -176,7 +175,7 @@ Flags are made using Wikipedia images
 
 <!-- Favorite TV Shows grid -->
 Favorite TV Shows
-<div class="grid-container" id="shows_grid">
+<div class="grid-container3" id="shows_grid">
     <!-- Favorite shows will be added here by JavaScript -->
 </div>
 
