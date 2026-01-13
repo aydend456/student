@@ -174,7 +174,7 @@ Flags are made using Wikipedia images
 </script>
 
 <!-- Favorite TV Shows grid -->
-Favorite TV Shows
+### Here are my Favorite TV Shows
 <div class="grid-container3" id="shows_grid">
     <!-- Favorite shows will be added here by JavaScript -->
 </div>
