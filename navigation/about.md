@@ -174,19 +174,20 @@ Flags are made using Wikipedia images
     ];
 
 
-    var gamesContainer = document.getElementById("food_grid");
-    for (const game of favorite_food) {
-        var item = document.createElement("div");
-        item.className = "grid-item";
-        var img = document.createElement("img");
-        img.src = food.img;
-        img.alt = food.title;
-        var p = document.createElement("p");
-        p.textContent = game.title;
-        item.appendChild(img);
-        item.appendChild(p);
-        gamesContainer.appendChild(item);
-    }
+ var gamesContainer = document.getElementById("food_grid");
+for (const game of favorite_food) {
+    var item = document.createElement("div");
+    item.className = "grid-item";
+    var img = document.createElement("img");
+    img.src = game.img;   // ✅ was food.img
+    img.alt = game.title; // ✅ was food.title
+    var p = document.createElement("p");
+    p.textContent = game.title;
+    item.appendChild(img);
+    item.appendChild(p);
+    gamesContainer.appendChild(item);
+}
+    
 </script>
 
 ### Journey through Life
