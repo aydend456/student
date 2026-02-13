@@ -148,10 +148,9 @@ Flags are made using Wikipedia images
 
 <!-- Favorite Food grid -->
 <h2>Favorite Food</h2>
-<div class="grid-container" id="game_grid">
+<div class="grid-container" id="food_grid">
     <!-- Favorite food will be added here by JavaScript -->
 </div>
-
 
 <script>
     var favorite_food = [
@@ -173,21 +172,19 @@ Flags are made using Wikipedia images
         }
     ];
 
-
- var gamesContainer = document.getElementById("game_grid");
-for (const game of favorite_game) {
-    var item = document.createElement("div");
-    item.className = "grid-item";
-    var img = document.createElement("img");
-    img.src = game.img;   // ✅ was food.img
-    img.alt = game.title; // ✅ was food.title
-    var p = document.createElement("p");
-    p.textContent = game.title;
-    item.appendChild(img);
-    item.appendChild(p);
-    gamesContainer.appendChild(item);
-}
-    
+    var gamesContainer = document.getElementById("food_grid");
+    for (const game of favorite_food) {  // ✅ correct array name
+        var item = document.createElement("div");
+        item.className = "grid-item";
+        var img = document.createElement("img");
+        img.src = game.img;
+        img.alt = game.title;
+        var p = document.createElement("p");
+        p.textContent = game.title;
+        item.appendChild(img);
+        item.appendChild(p);
+        gamesContainer.appendChild(item);
+    }
 </script>
 
 ### Journey through Life
