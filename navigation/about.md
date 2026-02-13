@@ -46,27 +46,13 @@ Flags are made using Wikipedia images
         margin: 5px 0; /* Add some margin for spacing */
     }
 
-    /* Food image styling for the favorite foods grid */
-    .food-img {
-        width: 100%;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 4px;
-        display: block;
-        margin-bottom: 8px;
-    }
-
-    .image-gallery {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
-        }
-
-    .image-gallery img {
-        max-height: 150px;
-        object-fit: cover;
-        border-radius: 5px;
+ 
+    /* Ensure this page doesn't force a white background so it matches site-wide styles */
+    body,
+    .opencs_root {
+        background: transparent !important;
+        background-color: transparent !important;
+        color: inherit !important;
     }
 </style>
 
@@ -116,7 +102,6 @@ Flags are made using Wikipedia images
     }
 </script>
 
-## Here are my favorite foods
 
 <h2>Favorite TV Shows</h2>
 <div class="grid-container" id="shows_grid">
@@ -127,7 +112,7 @@ Flags are made using Wikipedia images
 <script>
     var favorite_shows = [
         {
-            "img": "https://github.com/user-attachments/assets/e714f34b-77fc-42e3-9a32-3b8a0072d988",
+            "img": "https://github.com/user-attachments/assets/8625173e-e284-4404-87d3-0eacb82db560",
             "title": "One Piece"
         },
         {
@@ -171,19 +156,19 @@ Flags are made using Wikipedia images
 <script>
     var favorite_food = [
         {
-            "img": "https://github.com/user-attachments/assets/25c5c0fa-0be3-4212-9897-12b345851a13",
+            "img": "https://github.com/user-attachments/assets/29ae37a8-21c8-41ea-bf92-8f0239ecba4d",
             "title": "Pizza"
         },
         {
-            "img": "https://github.com/user-attachments/assets/4320b238-2926-4a3c-9c34-622fb47669bc",
+            "img": "https://github.com/user-attachments/assets/e2d3e9df-fc24-462d-b83c-6bcb74fddc45",
             "title": "Sushi"
         },
         {
-            "img": "https://github.com/user-attachments/assets/0c1a33e0-04b1-43b8-9ee4-39946316da81",
+            "img": "https://github.com/user-attachments/assets/88d01bdb-5ac9-4e79-811d-5465a4c4138a",
             "title": "Burgers"
         },
         {
-            "img": "https://github.com/user-attachments/assets/a81d8c62-9fda-40c9-8f38-46aed9bcbbe0",
+            "img": "https://github.com/user-attachments/assets/c2c6d2ae-89db-41f8-9c3b-42a95d915596",
             "title": "Ramen"
         }
     ];
