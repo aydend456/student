@@ -118,58 +118,90 @@ Flags are made using Wikipedia images
 
 ## Here are my favorite foods
 
-<div class="grid-container2" id="grid_food">
-    <!-- favorite food items will be added here by JavaScript -->
+<h2>Favorite TV Shows</h2>
+<div class="grid-container" id="shows_grid">
+    <!-- Favorite shows will be added here by JavaScript -->
 </div>
 
+
 <script>
-// Populate the Favorite Foods grid separately from the flags grid
-(function(){
-    const container = document.getElementById('grid_food');
-    if (!container) return; // nothing to do if placeholder missing
+    var favorite_shows = [
+        {
+            "img": "https://github.com/user-attachments/assets/e714f34b-77fc-42e3-9a32-3b8a0072d988",
+            "title": "One Piece"
+        },
+        {
+            "img": "https://github.com/user-attachments/assets/9aa11b4a-6f8d-42c2-8f96-dd857dabf952",
+            "title": "Solo Leveling"
+        },
+        {
+            "img": "https://github.com/user-attachments/assets/382dd0c1-291e-48a8-9cb5-b61886573c47",
+            "title": "Jujutsu Kaisen"
+        }
+    ];
 
-    // Apply styles (grid layout is also defined in the top CSS, this reinforces it)
-    container.style.border = '2px dashed';
-    container.style.padding = '10px';
-    container.style.display = 'grid';
-    container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
-    container.style.gap = '10px';
 
-    // Clear existing children to avoid duplicates when reloading
-    container.innerHTML = '';
+    var showsContainer = document.getElementById("shows_grid");
+    for (const show of favorite_shows) {
+        var item = document.createElement("div");
+        item.className = "grid-item";
+        var img = document.createElement("img");
+        img.src = show.img;
+        img.alt = show.title;
+        var p = document.createElement("p");
+        p.textContent = show.title;
+        item.appendChild(img);
+        item.appendChild(p);
+        showsContainer.appendChild(item);
+    }
+</script>
 
-         // Example favorite foods with optional image paths (replace with your actual favorites and image files)
-         const foods = [
-             {name: 'Pizza', img: 'a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg'},
-             {name: 'Sushi', img: '1/1c/Colorful_sushi_lunch.jpg'},
-             {name: 'Burgers', img: 'f/ff/In-N-Out_Burger_cheeseburgers_and_fries.jpg'},
-             {name: 'Ice Cream', img: '6/6f/An_ice_cream_cone_at_a_Ben_%26_Jerry%27s_shop_in_Montreal.jpg'},
-             {name: 'Ramen', img: '5/56/Soy_Milk_Ramen_and_Tonkotsu_Miso_Ramen_by_Goemon_Ramen_Bar.jpg'},
-         ];
 
-         foods.forEach(food => {
-                 const item = document.createElement('div');
-                 item.className = 'grid-item';
-                 item.style.padding = '12px';
-                 item.style.textAlign = 'center';
-                 item.style.borderRadius = '8px';
-                 item.style.border = '1px solid';
 
-                 // Image spot (if the file exists it will show; otherwise you'll see a broken image or can replace with a placeholder)
-                 const img = document.createElement('img');
-                 img.className = 'food-img';
-                 img.src = food.img;
-                 img.alt = food.name;
-                 item.appendChild(img);
 
-                 // Caption / name
-                 const caption = document.createElement('p');
-                 caption.textContent = food.name;
-                 item.appendChild(caption);
 
-                 container.appendChild(item);
-         });
-})();
+
+<!-- Favorite Food grid -->
+<h2>Favorite Food</h2>
+<div class="grid-container" id="food_grid">
+    <!-- Favorite food will be added here by JavaScript -->
+</div>
+
+
+<script>
+    var favorite_food = [
+        {
+            "img": "https://github.com/user-attachments/assets/25c5c0fa-0be3-4212-9897-12b345851a13",
+            "title": "Pizza"
+        },
+        {
+            "img": "https://github.com/user-attachments/assets/4320b238-2926-4a3c-9c34-622fb47669bc",
+            "title": "Sushi"
+        },
+        {
+            "img": "https://github.com/user-attachments/assets/0c1a33e0-04b1-43b8-9ee4-39946316da81",
+            "title": "Burgers"
+        },
+        {
+            "img": "https://github.com/user-attachments/assets/a81d8c62-9fda-40c9-8f38-46aed9bcbbe0",
+            "title": "Ramen"
+        }
+    ];
+
+
+    var gamesContainer = document.getElementById("food_grid");
+    for (const game of favorite_food) {
+        var item = document.createElement("div");
+        item.className = "grid-item";
+        var img = document.createElement("img");
+        img.src = food.img;
+        img.alt = food.title;
+        var p = document.createElement("p");
+        p.textContent = game.title;
+        item.appendChild(img);
+        item.appendChild(p);
+        gamesContainer.appendChild(item);
+    }
 </script>
 
 ### Journey through Life
