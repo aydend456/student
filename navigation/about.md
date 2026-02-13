@@ -148,7 +148,7 @@ Flags are made using Wikipedia images
 
 <!-- Favorite Food grid -->
 <h2>Favorite Food</h2>
-<div class="grid-container" id="food_grid">
+<div class="grid-container" id="game_grid">
     <!-- Favorite food will be added here by JavaScript -->
 </div>
 
@@ -174,8 +174,8 @@ Flags are made using Wikipedia images
     ];
 
 
- var gamesContainer = document.getElementById("food_grid");
-for (const game of favorite_food) {
+ var gamesContainer = document.getElementById("game_grid");
+for (const game of favorite_game) {
     var item = document.createElement("div");
     item.className = "grid-item";
     var img = document.createElement("img");
